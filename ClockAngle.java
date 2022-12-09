@@ -15,6 +15,7 @@ public class ClockAngle {
 
         if (hh <0 || mm< 0 || hh >12 || mm > 60){
             System.out.println("Wrong input");
+            return -1;
         }
         int hourAngle = (int)(hh*30 + mm*0.5);
         int minuteAngle = (int)(6*mm);
@@ -29,6 +30,6 @@ public class ClockAngle {
         
     }
     public static void main(String[] args) {
-        System.out.println(angle("09:60"));
+        System.out.println(angle("09:70"));
     }
 }

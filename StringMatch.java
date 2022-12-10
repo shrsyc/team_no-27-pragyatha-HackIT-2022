@@ -17,7 +17,8 @@ public class StringMatch{
             for (int j = 1; j <= m; j++)
             {
                 if (pattern.charAt(j - 1) == '*')helperArray[i][j] = helperArray[i][j - 1]|| helperArray[i - 1][j];
-                else if (pattern.charAt(j - 1) == '?'|| string.charAt(i - 1)== pattern.charAt(j - 1))helperArray[i][j] = helperArray[i - 1][j - 1];
+                else if (pattern.charAt(j - 1) == '?'|| string.charAt(i - 1)== pattern.charAt(j - 1))
+                            helperArray[i][j] = helperArray[i - 1][j - 1];
                 else helperArray[i][j] = false;
             }
         }
